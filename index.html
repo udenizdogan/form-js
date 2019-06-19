@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Elements</title>
+    <style>
+        [class*="error"] {
+            border: 1px solid #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="user" validate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" required name="username" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required name="name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" required name="surname" class="form-control" placeholder="Surname">
+                        </div>
+
+                        <div class="form-group">
+                            <select name="city" required class="form-control">
+                                <option>City 1</option>
+                                <option>City 2</option>
+                                <option>City 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" required name="email" class="form-control"
+                                error-invalid-text="Geçersiz format." placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" required name="phone" class="form-control" placeholder="Phone">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" required name="subject" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" required name="gender" value="male"> Male<br />
+                            <input type="radio" required name="gender" value="female"> Female<br />
+                            <input type="radio" required name="gender" value="other"> Other <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="notification" class="form-check-input" title="Notification" />
+                    <label for="notification">Send Notification</label> <br />
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script defer src="./form.js"></script>
+</body>
+
+</html>
